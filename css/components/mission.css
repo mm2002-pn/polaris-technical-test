@@ -1,0 +1,241 @@
+/* ==========================================================================
+   #LAYOUT - Navigation
+   ========================================================================== */
+
+.mission-container {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    position: relative;
+    margin-top: 100px !important;
+    margin-bottom: 70px !important;
+}
+
+.mission-left {
+    flex: 0 0 35%;
+    background: #EAF6E3;
+    block-size: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.mission-left h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 45px;
+    color: #333333;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mission-left h2 b {
+    font-weight: 700;
+}
+
+.mission-left h2 span {
+    font-weight: 700;
+    color: #667A62;
+}
+
+.mission-left p {
+    color: #555;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.mission-left a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #667A62;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.mission-left a:hover {
+    background: #556a51;
+    transform: translateY(-2px);
+}
+
+.mission-left-content {
+    position: relative;
+    z-index: 1;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #FFFFFF;
+    padding: 40px;
+    border: 5px solid #FFFFFF;
+}
+
+.mission-right-wrapper {
+    flex: 0 0 65%;
+    position: relative;
+    overflow: visible;
+}
+
+.mission-right {
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    transform: translateX(-50px);
+    width: calc(100% + 50px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-right h2 {
+    font-size: 16px;
+    text-align: right;
+    color: #333333;
+    line-height: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.mission-right h2 span {
+    font-weight: 700;
+    color: #333333;
+    line-height: 1.6;
+    font-size: 45px;
+    line-height: 56px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.video-container {
+    margin-top: auto;
+    margin-top: 40px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0px;
+}
+
+.video-container img {
+    width: 100%;
+    display: block;
+    border-radius: 0px;
+}
+
+/* Effet pulse */
+.video-play-button {
+    position: absolute;
+    bottom: 100px;
+    right: 120px;
+    width: 75px;
+    height: 75px;
+    background-color: #E05D41;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: visible;
+}
+
+.video-play-button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(102, 122, 98, 0.5);
+    animation: pulse 1.5s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.video-play-button:hover {
+    background-color: #556a51;
+    transform: scale(1.05);
+}
+
+.video-play-button svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin-left: 4px;
+}
+
+@media (max-width: 1024px) {
+
+    .mission-container {
+        flex-direction: column;
+    }
+
+    .mission-left,
+    .mission-right-wrapper {
+        flex: 0 0 100%;
+    }
+
+    .mission-right {
+        transform: none;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .mission-right h2 {
+        text-align: center;
+    }
+
+    .video-play-button {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mission-left-content {
+        padding: 20px;
+    }
+
+    .mission-left h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .mission-right h2 {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .mission-right h2 span {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .video-play-button {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .video-play-button svg {
+        width: 16px;
+        height: 16px;
+    }
+}

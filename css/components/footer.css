@@ -1,0 +1,363 @@
+/* ==========================================================================
+   #LAYOUT - FOOTER
+   ========================================================================== */
+.footer {
+    background-color: var(--color-green);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-heading {
+    font-family: "Mulish", Sans-serif;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-text {
+    color: #FFFFFF;
+    line-height: 28px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer-btn {
+    display: inline-block;
+    background-color: var(--color-orange);
+    color: white;
+    padding: 5px 20px 6px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.footer-btn-link {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-btn-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.footer-btn:hover {
+    background-color: var(--color-orange);
+    transform: translateY(-2px);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-list li:last-child {
+    margin-bottom: 0;
+}
+
+.contact-list a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: var(--color-red);
+}
+
+.quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin-bottom: 5px;
+}
+
+.quick-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.quick-links a:hover {
+    color: var(--color-orange);
+    transform: translateX(5px);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    aspect-ratio: 1/1;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.copyright {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--color-dark);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.copyright a {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+    .footer-columns {
+        gap: 30px;
+    }
+
+    .footer-column {
+        flex: 1 1 calc(50% - 30px);
+        min-width: 200px;
+    }
+
+    .footer {
+        padding: 50px 0 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-columns {
+        gap: 25px;
+    }
+
+    .footer-heading {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+
+    .footer-text {
+        font-size: 15px;
+        line-height: 26px;
+        margin-bottom: 15px;
+    }
+
+    .contact-list {
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .footer-heading {
+        font-size: 18px;
+        padding-bottom: 8px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .contact-list li {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .quick-links {
+        text-align: center;
+    }
+
+    .copyright {
+        padding: 30px 0;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .footer-heading {
+        font-size: 17px;
+    }
+
+    .footer-text,
+    .contact-list,
+    .quick-links a {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .footer-btn {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 0 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .footer-heading {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 12px;
+    }
+
+    .contact-list li {
+        margin-bottom: 12px;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .quick-links a {
+        padding: 4px 0;
+    }
+
+    .copyright {
+        padding: 20px 0;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .copyright a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer-columns {
+        gap: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .footer-heading {
+        font-size: 15px;
+    }
+
+    .footer-text,
+    .contact-list,
+    .quick-links a {
+        font-size: 13px;
+    }
+
+    .copyright {
+        font-size: 13px;
+        padding: 15px 0;
+    }
+}

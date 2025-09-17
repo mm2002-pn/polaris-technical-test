@@ -1,0 +1,243 @@
+/* ==========================================================================
+   #COMPONENTS - CONTACT
+   ========================================================================== */
+
+.contact {
+    background-color: #F5F5F5;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-column {
+    flex: 1;
+    min-inline-size: 300px;
+    padding: 15px 0px;
+    margin: 0;
+}
+
+.contact-column svg {
+    width: 18px;
+    height: 18px;
+    fill: #E05D42;
+}
+
+.icon-list-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #E05D42;
+    font-weight: 500;
+}
+
+.icon-list-text a {
+    color: #2d3748;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.icon-list-text a:hover {
+    color: #E05D42;
+}
+
+.social-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social-heading {
+    font-family: "Mulish", Sans-serif;
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--color-orange);
+    line-height: 1.5em;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--color-green);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon.facebook:hover {
+    background-color: #1877F2;
+}
+
+.social-icon.twitter:hover {
+    background-color: #1DA1F2;
+}
+
+.social-icon.youtube:hover {
+    background-color: #FF0000;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-icon.linkedin:hover {
+    background-color: #0A66C2;
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: #4a5568;
+    transition: fill 0.3s;
+}
+
+.social-icon:hover svg {
+    fill: white;
+}
+
+@media (max-width: 1024px) {
+    .contact-container {
+        padding: 0 20px;
+    }
+    
+    .contact-column {
+        min-inline-size: 250px;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .contact-column {
+        flex: 1 1 45%;
+        min-inline-size: auto;
+    }
+    
+    .social-section {
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+        align-items: stretch;
+    }
+
+    .contact-column {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    .icon-list-text {
+        justify-content: center;
+    }
+
+    .social-section {
+        justify-content: center;
+        margin-top: 5px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .social-heading {
+        margin-right: 0;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 20px 0;
+    }
+    
+    .contact-container {
+        padding: 15px;
+    }
+    
+    .contact-column {
+        padding: 12px 0;
+    }
+    
+    .icon-list-text {
+        font-size: 13px;
+        gap: 8px;
+    }
+    
+    .icon-list-text a {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    
+    .social-heading {
+        font-size: 13px;
+    }
+    
+    .social-icons-wrapper {
+        gap: 8px;
+    }
+    
+    .social-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .social-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-container {
+        padding: 10px;
+    }
+    
+    .contact-column {
+        padding: 10px 0;
+    }
+    
+    .icon-list-text {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+    
+    .social-section {
+        gap: 10px;
+    }
+    
+    .social-icons-wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,112 @@
+/* ==========================================================================
+   #LAYOUT - Posts Section
+   ========================================================================== */
+.section-news {
+    margin-bottom: 100px !important;
+}
+
+.section-news h4 {
+    font-weight: normal;
+    color: #555;
+}
+
+
+
+.posts-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.post {
+    overflow: hidden;
+    flex: 1 1 calc(33% - 20px);
+    min-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.post-thumbnail {
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Effet zoom au survol de l'image */
+.post-thumbnail img:hover {
+    transform: scale(1.1);
+}
+
+.post-content {
+    padding: 15px;
+}
+
+.post-meta {
+    font-size: 13px;
+    color:  var(--color-orange);
+    line-height: 20px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    gap: 10px;
+    align-items: center;
+    text-align: -webkit-match-parent;
+}
+
+.post-meta svg {
+    vertical-align: middle;
+    fill:  var(--color-orange);
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    margin: 0 8px 0 0;
+}
+
+.post-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--color-dark);
+    line-height: 25px;
+
+}
+
+.post-title a {
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.post-author {
+    font-size: 14px;
+    color:  var(--color-gray-medium);
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-author img {
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+@media (max-width: 1024px) {
+    .post {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .post {
+        flex: 1 1 100%;
+    }
+}

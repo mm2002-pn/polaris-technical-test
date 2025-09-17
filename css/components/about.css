@@ -1,0 +1,86 @@
+/* ==========================================================================
+   #LAYOUT - About Section
+   ========================================================================== */
+.about-section {
+    padding: 50px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.about-section .container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: self-start;
+    gap: 40px;
+}
+
+
+.about-section .column {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+}
+
+.about-section .column.left {
+    flex: 0 0 40%;
+}
+
+.about-section .column.right {
+    flex: 0 0 60%;
+}
+
+.multi-line-title {
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: right;
+    word-wrap: break-word;
+    line-height: 48px;
+    font-style: normal;
+}
+
+
+.multi-line-title b {
+    max-width: 100%;
+    font-family: "Mulish", Sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+    color: var(--color-dark);
+}
+
+.multi-line-title .highlight {
+    color:  var(--color-orange);
+}
+
+.about-section p {
+    font-family: "Mulish", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75em;
+    color: #555555;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.about-section .signature {
+    max-width: 180px;
+}
+
+@media (max-width: 768px) {
+    .about-section .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-section .column {
+        flex: 1 1 100%;
+    }
+
+    .multi-line-title {
+        text-align: center;
+        font-size: 32px;
+    }
+}
